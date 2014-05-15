@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPS Satellite</string>
+    <string name="ok">OK</string>
+    <string name="cancel">cancel</string>
+    <string name="save">save</string>
+    <string name="altitude">Altitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+</resources>
