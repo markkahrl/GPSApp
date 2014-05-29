@@ -32,6 +32,14 @@ public class GPSActivity extends Activity implements LocationListener
     	String lat = location.getLatitude()+"";
     	TextView ltv = (TextView) findViewById(R.id.latitude);
     	ltv.setText(lat);
+    	
+    	String lng = location.getLongitude()+"";
+    	TextView lgv = (TextView) findViewById(R.id.longitude);
+    	lgv.setText(lng);
+    	
+    	String acc = location.getAccuracy()+"";
+    	TextView accv = (TextView) findViewById(R.id.accuracy);
+    	accv.setText(acc);
     }
 
 	public void onProviderDisabled(String provider) 
