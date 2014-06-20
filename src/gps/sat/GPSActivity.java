@@ -10,7 +10,9 @@ import android.widget.TextView;
 
 public class GPSActivity extends Activity implements LocationListener
 {
-	private LocationManager locManager;
+    private LocationManager locManager;
+    private final static String M_FORMAT = "%.1f";
+    private final static String LATLON_FORMAT = "%.4f";
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -24,20 +26,23 @@ public class GPSActivity extends Activity implements LocationListener
     ///////// LocationListener interface
     public void onLocationChanged(Location location)
     {
-    	String alt = location.getAltitude()+"";
-    ///	String alt = new Double(location.getAltitude()).toString();
+    	double alt = location.getAltitude();
+        String salt = String.format(M_FORMAT, alt);
     	TextView atv = (TextView) findViewById(R.id.altitude);
-    	atv.setText(alt);
+    	atv.setText(salt);
     	
-    	String lat = location.getLatitude()+"";
+    	double lat = location.getLatitude();
+        String slat = String.format(LATLON_FORMAT, lat);
     	TextView ltv = (TextView) findViewById(R.id.latitude);
-    	ltv.setText(lat);
+    	ltv.setText(slat);
     	
-    	String lng = location.getLongitude()+"";
+    	double lng = location.getLongitude();
+        String slng = String.format(LATLON_FORMAT, lng);
     	TextView lgv = (TextView) findViewById(R.id.longitude);
-    	lgv.setText(lng);
+    	lgv.setText(slng);
     	
-    	String acc = location.getAccuracy()+"";
+    	float ac = location.getAccuracy();
+        String acc = String.format(M_FORMAT, ac);
     	TextView accv = (TextView) findViewById(R.id.accuracy);
     	accv.setText(acc);
     }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DuraTheme" >
+       <item name="android:textSize">40dp</item>
+       <item name="android:textColor">#fff</item>
+       <item name="android:actionBarStyle">@style/dura_action_bar</item>
+    </style>
+    <style name="dura_action_bar" parent="android:Widget.Holo.ActionBar">
+        <item name="android:height">54dp</item>
+        <item name="android:titleTextStyle">@style/TextAppearance.Dura</item>
+    </style>
+    <style name="TextAppearance.Dura"  parent="android:TextAppearance.Large">
+        <item name="android:textSize">40dp</item>
+    </style>
+</resources>
